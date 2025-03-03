@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:greenfarmer/utils/colors.dart';
+import 'package:greenfarmer/view/auth/login/login.dart';
 
 import '../widgets/app_text.dart';
 import 'auth_wrapper_controller.dart';
 
-class Login extends StatelessWidget {
-  const Login({super.key});
+class AuthWrapper extends StatelessWidget {
+  const AuthWrapper({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +30,7 @@ class Login extends StatelessWidget {
 
             Container(
               child: Obx(
-                    () => TabBar(
+                () => TabBar(
                   onTap: (index) {
                     authController.activeTabIndex.value = index;
                   },
@@ -52,11 +53,10 @@ class Login extends StatelessWidget {
                         child: AppText(
                           text: 'Login',
                           color: Colors.black,
-                          fontWeight: authController
-                              .activeTabIndex.value ==
-                              0
-                              ? FontWeight.bold
-                              : FontWeight.w400,
+                          fontWeight:
+                              authController.activeTabIndex.value == 0
+                                  ? FontWeight.bold
+                                  : FontWeight.w400,
                         ),
                       ),
                     ),
@@ -66,11 +66,10 @@ class Login extends StatelessWidget {
                         child: AppText(
                           text: 'Signup',
                           color: Colors.black,
-                          fontWeight: authController
-                              .activeTabIndex.value ==
-                              1
-                              ? FontWeight.bold
-                              : FontWeight.w400,
+                          fontWeight:
+                              authController.activeTabIndex.value == 1
+                                  ? FontWeight.bold
+                                  : FontWeight.w400,
                         ),
                       ),
                     ),
@@ -79,12 +78,14 @@ class Login extends StatelessWidget {
               ),
             ),
 
-            Expanded(child: TabBarView(children: [
-              Container(),
-              Container(),
-            ]))
+            Expanded(
+              child: TabBarView(
+                controller: authController.tabController,
+                children: [Login(), Container()],
+              ),
+            ),
           ],
-        )
+        ),
       ),
     );
   }
