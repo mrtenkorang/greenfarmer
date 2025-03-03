@@ -1,0 +1,1 @@
+ /home/mrtenkorang/greenfarmer/.dart_tool/flutter_build/f91c88e8518aa49f0df6450c21364724/dart_build_result.json: 
