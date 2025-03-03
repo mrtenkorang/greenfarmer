@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:greenfarmer/utils/colors.dart';
 import 'package:greenfarmer/view/splash/splash.dart';
 import 'package:get/get.dart';
 
@@ -15,7 +16,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        colorScheme: ColorScheme.fromSeed(seedColor: AppColors.kPrimaryColor),
       ),
       home: Splash(),
     );
