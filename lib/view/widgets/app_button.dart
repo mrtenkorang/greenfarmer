@@ -6,7 +6,7 @@ class AppButton extends StatelessWidget {
   const AppButton({
     super.key,
     this.buttonText,
-    required this.buttonTextColor,
+    this.buttonTextColor,
     this.buttonTextSize,
     required this.onPressed,
     this.buttonWidth,
@@ -58,7 +58,7 @@ class AppButton extends StatelessWidget {
           ),
           shape: WidgetStateProperty.all(
             RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(borderRadius ?? 25),
+              borderRadius: BorderRadius.circular(borderRadius ?? 10),
               side: BorderSide(
                 width: 1.5,
                 color: borderColor ?? Colors.transparent, // Set border color
