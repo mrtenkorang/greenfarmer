@@ -49,7 +49,7 @@ class _SplashState extends State<Splash> {
               buttonWidth: 300,
               buttonTextColor: AppColors.whiteColor,
               onPressed: () {
-                Get.to(() => Login());
+                Get.to(() => AuthWrapper());
               },
               buttonText: "Get Started",
               buttonTextFontWeight: FontWeight.bold,
