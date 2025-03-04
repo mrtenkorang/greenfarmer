@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:greenfarmer/utils/colors.dart';
 import 'package:greenfarmer/view/auth/login/login.dart';
 import 'package:greenfarmer/view/auth/signup/signup.dart';
-import 'package:greenfarmer/view/util/images.dart';
+import 'package:greenfarmer/view/utils/images.dart';
 
 import '../widgets/app_text.dart';
 import 'auth_wrapper_controller.dart';

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:greenfarmer/utils/colors.dart';
-import 'package:greenfarmer/view/splash/splash.dart';
+import 'package:greenfarmer/view/utils/colors.dart';
+import 'package:greenfarmer/view/seller/home/seller_home.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -14,11 +14,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-      title: 'Flutter Demo',
+      title: 'Green Farmer',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.kPrimaryColor),
       ),
-      home: Splash(),
+      home: SellerHome(),
     );
   }
 }

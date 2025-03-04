@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../utils/colors.dart';
+import 'package:greenfarmer/view/utils/colors.dart';
 
 class AppTextField extends StatelessWidget {
   const AppTextField({

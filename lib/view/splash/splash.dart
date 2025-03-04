@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:greenfarmer/utils/colors.dart';
-import 'package:greenfarmer/view/util/images.dart';
+import 'package:greenfarmer/view/utils/colors.dart';
+import 'package:greenfarmer/view/utils/images.dart';
 import 'package:greenfarmer/view/widgets/app_button.dart';
 import 'package:greenfarmer/view/widgets/app_text.dart';
 import 'package:get/get.dart';
