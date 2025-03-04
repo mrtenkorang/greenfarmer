@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:greenfarmer/utils/colors.dart';
+import 'package:greenfarmer/view/util/images.dart';
 import 'package:greenfarmer/view/widgets/app_button.dart';
 import 'package:greenfarmer/view/widgets/app_text.dart';
 import 'package:get/get.dart';
@@ -21,7 +22,7 @@ class _SplashState extends State<Splash> {
         width: double.maxFinite,
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("assets/img/splash_image.jpg"),
+            image: AssetImage(AppImages.splashImage),
             fit: BoxFit.cover,
           ),
         ),
