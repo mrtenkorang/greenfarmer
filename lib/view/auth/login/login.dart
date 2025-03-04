@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:greenfarmer/view/auth/login/login_controller.dart';
+import 'package:greenfarmer/view/util/images.dart';
 import 'package:greenfarmer/view/widgets/app_button.dart';
 import 'package:greenfarmer/view/widgets/app_text.dart';
 import 'package:greenfarmer/view/widgets/app_text_field.dart';
 import 'package:get/get.dart';
 
 import 'package:greenfarmer/utils/colors.dart';
+import 'package:greenfarmer/view/widgets/third_party_auth_container.dart';
 
 class Login extends StatelessWidget {
   const Login({super.key});
@@ -83,8 +85,41 @@ class Login extends StatelessWidget {
                 text: "Forgot Password?",
                 color: AppColors.kPrimaryColor,
               ),
+
+
             ],
           ),
+          Row(
+            children: [
+              Expanded(child: Divider(height: 5,)),
+              SizedBox(width: 10,),
+              AppText(text: "GF", fontWeight: FontWeight.bold,),
+              SizedBox(width: 10,),
+              Expanded(child: Divider(height: 5,)),
+            ],
+          ),
+          SizedBox(height: 20,),
+          ThirdPartyAuthContainer(children: [
+            Row(
+
+              children: [
+                Image.asset(AppImages.googleLogo, height: 20,),
+                SizedBox(width: 10,),
+                AppText(text: "Continue with Google",),
+              ],
+            ),
+          ]),
+          SizedBox(height: 20,),
+          ThirdPartyAuthContainer(children: [
+            Row(
+
+              children: [
+                AppImages.apple(size: 20),
+                SizedBox(width: 10,),
+                AppText(text: "Continue with Apple",),
+              ],
+            ),
+          ])
         ],
       ),
     );
