@@ -19,7 +19,7 @@ class AppButton extends StatelessWidget {
     this.shadow,
     this.icon = false,
     this.buttonHorizontalMargin,
-    this.loading = false,
+    this.loading = false, this.iconn,
   });
 
   final String? buttonText;
@@ -35,6 +35,7 @@ class AppButton extends StatelessWidget {
   final Function()? onPressed;
   final bool checkMargin, loading, icon;
   final List<BoxShadow>? shadow;
+  final Icon? iconn;
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +49,8 @@ class AppButton extends StatelessWidget {
       ),
       width: buttonWidth,
       height: buttonHeight ?? 50,
-      child: ElevatedButton(
+      child: ElevatedButton.icon(
+        icon: iconn,
         onPressed: onPressed,
         style: ButtonStyle(
           backgroundColor: WidgetStateProperty.resolveWith<Color?>(
@@ -68,19 +70,20 @@ class AppButton extends StatelessWidget {
           // Set shadowColor to transparent to remove the default shadow
           shadowColor: WidgetStateProperty.all(Colors.transparent),
         ),
-        child: icon
-            ? Icon(
-          Icons.add,
-          color: buttonTextColor,
-          size: 30,
-        )
-            : AppText(
-          text: buttonText!,
-          textAlign: TextAlign.center,
-          color: buttonTextColor,
-          fontSize: buttonTextSize,
-          fontWeight: buttonTextFontWeight,
-        ),
+        label: AppText(text: buttonText??""),
+        // child: icon
+        //     ? Icon(
+        //   Icons.add,
+        //   color: buttonTextColor,
+        //   size: 30,
+        // )
+        //     : AppText(
+        //   text: buttonText ?? "",
+        //   textAlign: TextAlign.center,
+        //   color: buttonTextColor,
+        //   fontSize: buttonTextSize,
+        //   fontWeight: buttonTextFontWeight,
+        // ),
       ),
     );
   }
