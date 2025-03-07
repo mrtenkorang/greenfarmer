@@ -12,6 +12,8 @@ class AppImages {
   static const String vegImageBG = 'assets/img/veg-bg.jpg';
   static const String vegImage2 = 'assets/img/veg_img.png';
   static const String fruitImage = 'assets/img/fruits.png';
+  static const String poultryImage = 'assets/img/poultry.jpg';
+  static const String profileImage = 'assets/img/tenkorang.jpg';
 
   static var apple = ({Color? color, double? size}) => SvgPicture.asset(
     'assets/img/apple.svg',
