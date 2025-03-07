@@ -6,7 +6,7 @@ import 'package:get/get.dart';
 import 'package:greenfarmer/view/widgets/app_top_bar.dart';
 import 'package:greenfarmer/view/widgets/shop_card.dart';
 
-import 'package:greenfarmer/view/auth/auth_wrapper_controller.dart';
+import 'package:greenfarmer/view/seller/shop_details/shop_details.dart';
 
 class SellerHome extends StatelessWidget {
   const SellerHome({super.key});
@@ -20,18 +20,24 @@ class SellerHome extends StatelessWidget {
         child: Column(
           children: [
             AppTopBar(),
-            SizedBox(height: 20),
-            ShopCard(
-              shopName: "Vegetable shop",
-              shopImageUrl: AppImages.vegImage2,
-              onViewShopPressed: (){},
-            ),
-            SizedBox(height: 20),
-            ShopCard(
-              cardColor: AppColors.kShopCardColor2,
-              shopName: "Fruit shop",
-              shopImageUrl: AppImages.fruitImage,
-              onViewShopPressed: (){},
+            SingleChildScrollView(
+              child: Column(
+                children: [
+                  SizedBox(height: 20),
+                  ShopCard(
+                    shopName: "Vegetable shop",
+                    shopImageUrl: AppImages.vegImage2,
+                    onViewShopPressed: () => Get.to(() => ShopDetails()),
+                  ),
+                  SizedBox(height: 20),
+                  ShopCard(
+                    cardColor: AppColors.kShopCardColor2,
+                    shopName: "Fruit shop",
+                    shopImageUrl: AppImages.fruitImage,
+                    onViewShopPressed: () => Get.to(() => ShopDetails()),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
@@ -41,10 +47,7 @@ class SellerHome extends StatelessWidget {
         builder: (context) {
           return BottomNavigationBar(
             items: const [
-              BottomNavigationBarItem(
-                icon: Icon(Icons.home),
-                label: 'Home',
-              ),
+              BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
               // BottomNavigationBarItem(
               //   icon: Icon(Icons.location_on),
               //   label: 'First Evacuation',
@@ -52,9 +55,7 @@ class SellerHome extends StatelessWidget {
               BottomNavigationBarItem(
                 icon: Icon(Icons.person),
                 label: 'Profile',
-
               ),
-
             ],
             currentIndex: sellerHomeController.selectedIndex.value,
             selectedItemColor: Colors.white,
@@ -62,9 +63,9 @@ class SellerHome extends StatelessWidget {
             backgroundColor: AppColors.kPrimaryColor,
             onTap: sellerHomeController.changeIndex,
             selectedLabelStyle: TextStyle(
-                fontFamily: 'Montserrat', // Replace with your font family
-                fontSize: 12,
-                fontWeight: FontWeight.bold
+              fontFamily: 'Montserrat', // Replace with your font family
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
             ),
             unselectedLabelStyle: TextStyle(
               fontFamily: 'Montserrat', // Replace with your font family
