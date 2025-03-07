@@ -70,7 +70,7 @@ class AppButton extends StatelessWidget {
           // Set shadowColor to transparent to remove the default shadow
           shadowColor: WidgetStateProperty.all(Colors.transparent),
         ),
-        label: AppText(text: buttonText??""),
+        label: AppText(text: buttonText??"", color: buttonTextColor,),
         // child: icon
         //     ? Icon(
         //   Icons.add,
