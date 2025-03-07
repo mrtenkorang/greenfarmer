@@ -45,7 +45,7 @@ class ShopCard extends StatelessWidget {
               ),
               Spacer(),
               GestureDetector(
-                onTap: ()=> onViewShopPressed,
+                onTap: ()=> onViewShopPressed!(),
                 child: Container(
                   padding: EdgeInsets.all(10),
                   decoration: BoxDecoration(
