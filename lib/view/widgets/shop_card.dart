@@ -12,7 +12,7 @@ class ShopCard extends StatelessWidget {
     this.totalOrders,
     this.totalActiveOrders,
     this.totalCompletedOrders,
-    this.shopImageUrl, this.cardColor,
+    this.shopImageUrl, this.cardColor, this.spaceWidth,
   });
   final String shopName;
   final VoidCallback? onViewShopPressed;
@@ -22,6 +22,7 @@ class ShopCard extends StatelessWidget {
       totalCompletedOrders;
   final String? shopImageUrl;
   final Color? cardColor;
+  final double? spaceWidth;
 
   @override
   Widget build(BuildContext context) {
@@ -109,8 +110,10 @@ class ShopCard extends StatelessWidget {
                   ),
                 ],
               ),
-              SizedBox(width: 10,),
-              Image.asset(shopImageUrl ?? "", height: 190),
+              SizedBox(width: spaceWidth??10,),
+              Hero(
+                tag: shopImageUrl!,
+                  child: Image.asset(shopImageUrl ?? "", height: 190)),
             ],
           ),
         ],
