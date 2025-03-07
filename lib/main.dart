@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:greenfarmer/view/seller/home/home_wrapper.dart';
 import 'package:greenfarmer/view/utils/colors.dart';
-import 'package:greenfarmer/view/seller/home/seller_home.dart';
 import 'package:get/get.dart';
 
 void main() {
