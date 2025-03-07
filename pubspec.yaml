@@ -37,6 +37,7 @@ dependencies:
   get: ^4.7.2
   flutter_svg: ^2.0.17
   intl: ^0.20.2
+  image_picker: ^1.1.2
 
 dev_dependencies:
   flutter_test:
@@ -71,6 +72,8 @@ flutter:
      - assets/img/veg-bg.jpg
      - assets/img/veg_img.png
      - assets/img/fruits.png
+     - assets/img/poultry.jpg
+     - assets/img/tenkorang.jpg
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
