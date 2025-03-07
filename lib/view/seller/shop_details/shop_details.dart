@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:greenfarmer/view/seller/order_management/order_management.dart';
 import 'package:greenfarmer/view/utils/colors.dart';
-import 'package:greenfarmer/view/utils/images.dart';
 import 'package:greenfarmer/view/widgets/app_button.dart';
 import 'package:greenfarmer/view/widgets/app_top_bar.dart';
+import 'package:get/get.dart';
 
 class ShopDetails extends StatelessWidget {
-  const ShopDetails({super.key});
+  const ShopDetails({super.key, required this.title, required this.imagePath, required this.inventory});
+  final String title;
+  final String imagePath;
+  final List<Map<String, String>> inventory;
 
   @override
   Widget build(BuildContext context) {
@@ -23,12 +27,15 @@ class ShopDetails extends StatelessWidget {
             Container(
               width: double.infinity,
               height: 200,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                  image: AssetImage(AppImages.vegImage2),
-                  fit: BoxFit.contain,
-                ),
-              ),
+              child: Hero(
+                  tag: imagePath,
+                  child: Image.asset(imagePath)),
+              // decoration: BoxDecoration(
+              //   image: DecorationImage(
+              //     image: AssetImage(AppImages.vegImage2),
+              //     fit: BoxFit.contain,
+              //   ),
+              // ),
             ),
 
             // Shop Overview
@@ -39,8 +46,8 @@ class ShopDetails extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     // Shop Name
-                    const Text(
-                      "Green Farm Vegetables",
+                    Text(
+                      title,
                       style: TextStyle(
                         fontSize: 22,
                         fontWeight: FontWeight.bold,
@@ -84,9 +91,11 @@ class ShopDetails extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 10),
-                    _buildInventoryItem("Tomatoes", "50 kg", "GHS 12/kg"),
-                    _buildInventoryItem("Cabbage", "30 pcs", "GHS 5/pc"),
-                    _buildInventoryItem("Carrots", "40 kg", "GHS 8/kg"),
+                    ...inventory.map((item) => _buildInventoryItem(
+                      item['product'] ?? "",
+                      item['quantity'] ?? "",
+                      item['price'] ?? "",
+                    )),
                     const SizedBox(height: 20),
 
                     // Stock Management
@@ -99,6 +108,7 @@ class ShopDetails extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     AppButton(
+                      iconn: Icon(Icons.update, color: AppColors.whiteColor,),
                       onPressed: () {},
                       backgroundColor: AppColors.kPrimaryColor,
                       buttonText: "Update Stock",
@@ -162,6 +172,7 @@ class ShopDetails extends StatelessWidget {
                     ),
                     const SizedBox(height: 10),
                     AppButton(
+                      iconn: Icon(Icons.edit, color: Colors.white,),
                       onPressed: () {},
                       backgroundColor: AppColors.kSecondaryColor,
                       buttonText: "Edit Shop",
@@ -260,9 +271,7 @@ class ShopDetails extends StatelessWidget {
         ),
         title: Text(title, style: const TextStyle(fontSize: 16)),
         trailing: const Icon(Icons.arrow_forward_ios, size: 18),
-        onTap: () {
-          // TODO: Implement order tracking
-        },
+        onTap: () => Get.to(() => OrderManagementPage()),
       ),
     );
   }
