@@ -38,6 +38,12 @@
       "languageVersion": "3.4"
     },
     {
+      "name": "cross_file",
+      "rootUri": "file:///home/mrtenkorang/.pub-cache/hosted/pub.dev/cross_file-0.3.4+2",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
       "name": "cupertino_icons",
       "rootUri": "file:///home/mrtenkorang/.pub-cache/hosted/pub.dev/cupertino_icons-1.0.8",
       "packageUri": "lib/",
@@ -48,6 +54,30 @@
       "rootUri": "file:///home/mrtenkorang/.pub-cache/hosted/pub.dev/fake_async-1.3.2",
       "packageUri": "lib/",
       "languageVersion": "3.3"
+    },
+    {
+      "name": "file_selector_linux",
+      "rootUri": "file:///home/mrtenkorang/.pub-cache/hosted/pub.dev/file_selector_linux-0.9.3+2",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "file_selector_macos",
+      "rootUri": "file:///home/mrtenkorang/.pub-cache/hosted/pub.dev/file_selector_macos-0.9.4+2",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "file_selector_platform_interface",
+      "rootUri": "file:///home/mrtenkorang/.pub-cache/hosted/pub.dev/file_selector_platform_interface-2.6.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
+    },
+    {
+      "name": "file_selector_windows",
+      "rootUri": "file:///home/mrtenkorang/.pub-cache/hosted/pub.dev/file_selector_windows-0.9.3+4",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
     },
     {
       "name": "flutter",
@@ -62,6 +92,12 @@
       "languageVersion": "3.5"
     },
     {
+      "name": "flutter_plugin_android_lifecycle",
+      "rootUri": "file:///home/mrtenkorang/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.27",
+      "packageUri": "lib/",
+      "languageVersion": "3.6"
+    },
+    {
       "name": "flutter_svg",
       "rootUri": "file:///home/mrtenkorang/.pub-cache/hosted/pub.dev/flutter_svg-2.0.17",
       "packageUri": "lib/",
@@ -70,6 +106,12 @@
     {
       "name": "flutter_test",
       "rootUri": "file:///home/mrtenkorang/development/flutter/packages/flutter_test",
+      "packageUri": "lib/",
+      "languageVersion": "3.7"
+    },
+    {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///home/mrtenkorang/development/flutter/packages/flutter_web_plugins",
       "packageUri": "lib/",
       "languageVersion": "3.7"
     },
@@ -90,6 +132,54 @@
       "rootUri": "file:///home/mrtenkorang/.pub-cache/hosted/pub.dev/http_parser-4.1.2",
       "packageUri": "lib/",
       "languageVersion": "3.4"
+    },
+    {
+      "name": "image_picker",
+      "rootUri": "file:///home/mrtenkorang/.pub-cache/hosted/pub.dev/image_picker-1.1.2",
+      "packageUri": "lib/",
+      "languageVersion": "3.3"
+    },
+    {
+      "name": "image_picker_android",
+      "rootUri": "file:///home/mrtenkorang/.pub-cache/hosted/pub.dev/image_picker_android-0.8.12+22",
+      "packageUri": "lib/",
+      "languageVersion": "3.6"
+    },
+    {
+      "name": "image_picker_for_web",
+      "rootUri": "file:///home/mrtenkorang/.pub-cache/hosted/pub.dev/image_picker_for_web-3.0.6",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "image_picker_ios",
+      "rootUri": "file:///home/mrtenkorang/.pub-cache/hosted/pub.dev/image_picker_ios-0.8.12+2",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "image_picker_linux",
+      "rootUri": "file:///home/mrtenkorang/.pub-cache/hosted/pub.dev/image_picker_linux-0.2.1+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
+    },
+    {
+      "name": "image_picker_macos",
+      "rootUri": "file:///home/mrtenkorang/.pub-cache/hosted/pub.dev/image_picker_macos-0.2.1+2",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "image_picker_platform_interface",
+      "rootUri": "file:///home/mrtenkorang/.pub-cache/hosted/pub.dev/image_picker_platform_interface-2.10.1",
+      "packageUri": "lib/",
+      "languageVersion": "3.4"
+    },
+    {
+      "name": "image_picker_windows",
+      "rootUri": "file:///home/mrtenkorang/.pub-cache/hosted/pub.dev/image_picker_windows-0.2.1+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.19"
     },
     {
       "name": "intl",
@@ -140,6 +230,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "mime",
+      "rootUri": "file:///home/mrtenkorang/.pub-cache/hosted/pub.dev/mime-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "3.2"
+    },
+    {
       "name": "path",
       "rootUri": "file:///home/mrtenkorang/.pub-cache/hosted/pub.dev/path-1.9.1",
       "packageUri": "lib/",
@@ -156,6 +252,12 @@
       "rootUri": "file:///home/mrtenkorang/.pub-cache/hosted/pub.dev/petitparser-6.1.0",
       "packageUri": "lib/",
       "languageVersion": "3.5"
+    },
+    {
+      "name": "plugin_platform_interface",
+      "rootUri": "file:///home/mrtenkorang/.pub-cache/hosted/pub.dev/plugin_platform_interface-2.1.8",
+      "packageUri": "lib/",
+      "languageVersion": "3.0"
     },
     {
       "name": "sky_engine",
@@ -254,7 +356,7 @@
       "languageVersion": "3.7"
     }
   ],
-  "generated": "2025-03-07T11:59:45.545628Z",
+  "generated": "2025-03-07T15:30:14.011119Z",
   "generator": "pub",
   "generatorVersion": "3.7.0",
   "flutterRoot": "file:///home/mrtenkorang/development/flutter",

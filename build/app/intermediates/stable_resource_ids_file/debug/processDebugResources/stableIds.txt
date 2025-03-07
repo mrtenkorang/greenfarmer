@@ -41,6 +41,7 @@ com.example.greenfarmer:id/special_effects_controller_view_tag = 0x7f070045
 com.example.greenfarmer:attr/splitRatio = 0x7f030022
 com.example.greenfarmer:id/tag_transition_group = 0x7f07004f
 com.example.greenfarmer:id/right_side = 0x7f070043
+com.example.greenfarmer:xml/flutter_image_picker_file_paths = 0x7f0e0000
 com.example.greenfarmer:id/right_icon = 0x7f070042
 com.example.greenfarmer:id/notification_main_column_container = 0x7f070040
 com.example.greenfarmer:id/notification_main_column = 0x7f07003f
