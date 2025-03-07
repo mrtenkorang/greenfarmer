@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
+import '../../utils/colors.dart';
+import '../../widgets/app_button.dart';
+
 class OrderManagementPage extends StatefulWidget {
   const OrderManagementPage({super.key});
 
@@ -49,7 +52,8 @@ class _OrderManagementPageState extends State<OrderManagementPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("Order Management")),
+      backgroundColor: AppColors.whiteColor,
+      appBar: AppBar(title: const Text("Order Management"), backgroundColor: AppColors.whiteColor,),
       body: Column(
         children: [
           // Tabs for Filtering Orders
@@ -58,7 +62,7 @@ class _OrderManagementPageState extends State<OrderManagementPage> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                _buildStatusTab("Pending"),
+                _buildStatusTab("Pending",),
                 _buildStatusTab("Completed"),
                 _buildStatusTab("Canceled"),
               ],
@@ -68,9 +72,9 @@ class _OrderManagementPageState extends State<OrderManagementPage> {
           // Order List View
           Expanded(
             child: ListView.builder(
-              itemCount: orders.where((o) => o["status"] == selectedStatus).length,
+              itemCount: orders.where((item) => item["status"] == selectedStatus).length,
               itemBuilder: (context, index) {
-                var filteredOrders = orders.where((o) => o["status"] == selectedStatus).toList();
+                var filteredOrders = orders.where((item) => item["status"] == selectedStatus).toList();
                 var order = filteredOrders[index];
                 return _buildOrderCard(order);
               },
@@ -105,6 +109,7 @@ class _OrderManagementPageState extends State<OrderManagementPage> {
   // Widget to build each order card
   Widget _buildOrderCard(Map<String, dynamic> order) {
     return Card(
+      elevation: 0,
       margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
       child: ListTile(
         title: Text(
@@ -182,23 +187,49 @@ class OrderDetailsPage extends StatelessWidget {
 
             // Action Buttons
             if (order['status'] == "Pending") ...[
-              ElevatedButton.icon(
-                onPressed: () {
-                  // TODO: Implement mark as completed
-                },
-                icon: const Icon(Icons.check),
-                label: const Text("Mark as Completed"),
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+              Row(
+                children: [
+                  AppButton(
+                    iconn: Icon(Icons.check, color: Colors.white,),
+                    onPressed: () {},
+                    backgroundColor: AppColors.kPrimaryColor,
+                    buttonText: "Mark as completed",
+                    buttonTextSize: 18,
+                    buttonTextColor: AppColors.whiteColor,
+
+                  ),
+
+                  const SizedBox(width: 10),
+
+                  AppButton(
+                    iconn: Icon(Icons.cancel, color: Colors.red,),
+                    onPressed: () {},
+                    borderColor: Colors.red,
+
+                    buttonText: "Cancel Order",
+                    buttonTextSize: 18,
+                    buttonTextColor: Colors.red,
+
+                  ),
+                ],
               ),
-              const SizedBox(height: 10),
-              ElevatedButton.icon(
-                onPressed: () {
-                  // TODO: Implement cancel order feature
-                },
-                icon: const Icon(Icons.cancel),
-                label: const Text("Cancel Order"),
-                style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
-              ),
+              // ElevatedButton.icon(
+              //   onPressed: () {
+              //     // TODO: Implement mark as completed
+              //   },
+              //   icon: const Icon(Icons.check),
+              //   label: const Text("Mark as Completed"),
+              //   style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+              // ),
+
+              // ElevatedButton.icon(
+              //   onPressed: () {
+              //     // TODO: Implement cancel order feature
+              //   },
+              //   icon: const Icon(Icons.cancel),
+              //   label: const Text("Cancel Order"),
+              //   style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
+              // ),
             ],
           ],
         ),
