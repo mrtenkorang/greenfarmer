@@ -107,6 +107,13 @@
             </list>
           </value>
         </entry>
+        <entry key="intl">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/intl-0.20.2/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="leak_tracker">
           <value>
             <list>
@@ -298,6 +305,7 @@
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/get-4.7.2/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/http-1.3.0/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/http_parser-4.1.2/lib" />
+      <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/intl-0.20.2/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/leak_tracker-10.0.8/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/leak_tracker_flutter_testing-3.0.9/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dev/leak_tracker_testing-3.0.1/lib" />
