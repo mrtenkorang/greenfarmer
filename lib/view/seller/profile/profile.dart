@@ -13,7 +13,7 @@ class SellerProfilePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: AppColors.whiteColor,
       appBar: AppBar(
-        title: Text("Seller Profile"),
+        title: Text("Seller Profile", style: TextStyle(color: AppColors.whiteColor)),
         backgroundColor: AppColors.kPrimaryColor,
       ),
       body: Padding(

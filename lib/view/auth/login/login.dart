@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:greenfarmer/view/auth/login/login_controller.dart';
+import 'package:greenfarmer/view/seller/home/home_wrapper.dart';
 import 'package:greenfarmer/view/utils/images.dart';
 import 'package:greenfarmer/view/widgets/app_button.dart';
 import 'package:greenfarmer/view/widgets/app_text.dart';
@@ -41,7 +42,7 @@ class Login extends StatelessWidget {
           SizedBox(height: 30),
           AppButton(
             backgroundColor: AppColors.kPrimaryColor,
-            onPressed: () {},
+            onPressed: () => Get.to(()=> SellerHome()),
             buttonText: "Login",
             buttonTextFontWeight: FontWeight.bold,
             buttonTextColor: AppColors.whiteColor,

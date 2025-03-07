@@ -63,53 +63,54 @@ class ShopCard extends StatelessWidget {
             ],
           ),
           SizedBox(height: 20),
-          AppText(text: "Overview", decoration: TextDecoration.underline, fontWeight: FontWeight.bold),
-          SizedBox(height: 10),
+          // AppText(text: "Overview", decoration: TextDecoration.underline, fontWeight: FontWeight.bold),
+          // SizedBox(height: 10),
           Row(
             children: [
-              Column(
-                children: [
-                  Row(
-                    children: [
-                      Column(
-                        children: [
-                          Image.asset(AppImages.totalIcon, height: 40),
-                          AppText(text: "Products"),
-                          AppText(text: totalProducts ?? "none", fontWeight: FontWeight.bold),
-                        ],
-                      ),
-                      SizedBox(width: 10),
-                      Column(
-                        children: [
-                          Image.asset(AppImages.totalIcon, height: 40),
-                          AppText(text: "Total Orders"),
-                          AppText(text: "40", fontWeight: FontWeight.bold),
-                        ],
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 10,),
-                  Row(
-                    children: [
-                      Column(
-                        children: [
-                          Image.asset(AppImages.totalIcon, height: 40),
-                          AppText(text: "Products"),
-                          AppText(text: "40", fontWeight: FontWeight.bold),
-                        ],
-                      ),
-                      SizedBox(width: 10),
-                      Column(
-                        children: [
-                          Image.asset(AppImages.totalIcon, height: 40),
-                          AppText(text: "Products"),
-                          AppText(text: "40", fontWeight: FontWeight.bold),
-                        ],
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+              Container(),
+              // Column(
+              //   children: [
+              //     Row(
+              //       children: [
+              //         Column(
+              //           children: [
+              //             Image.asset(AppImages.totalIcon, height: 40),
+              //             AppText(text: "Products"),
+              //             AppText(text: totalProducts ?? "none", fontWeight: FontWeight.bold),
+              //           ],
+              //         ),
+              //         SizedBox(width: 10),
+              //         Column(
+              //           children: [
+              //             Image.asset(AppImages.totalIcon, height: 40),
+              //             AppText(text: "Total Orders"),
+              //             AppText(text: "40", fontWeight: FontWeight.bold),
+              //           ],
+              //         ),
+              //       ],
+              //     ),
+              //     SizedBox(height: 10,),
+              //     Row(
+              //       children: [
+              //         Column(
+              //           children: [
+              //             Image.asset(AppImages.totalIcon, height: 40),
+              //             AppText(text: "Products"),
+              //             AppText(text: "40", fontWeight: FontWeight.bold),
+              //           ],
+              //         ),
+              //         SizedBox(width: 10),
+              //         Column(
+              //           children: [
+              //             Image.asset(AppImages.totalIcon, height: 40),
+              //             AppText(text: "Products"),
+              //             AppText(text: "40", fontWeight: FontWeight.bold),
+              //           ],
+              //         ),
+              //       ],
+              //     ),
+              //   ],
+              // ),
               SizedBox(width: spaceWidth??10,),
               Hero(
                 tag: shopImageUrl!,

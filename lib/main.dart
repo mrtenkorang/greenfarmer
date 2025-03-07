@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:greenfarmer/view/seller/home/home_wrapper.dart';
+import 'package:greenfarmer/view/splash/splash.dart';
 import 'package:greenfarmer/view/utils/colors.dart';
 import 'package:get/get.dart';
 
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: AppColors.kPrimaryColor),
       ),
-      home: SellerHome(),
+      home: Splash(),
     );
   }
 }
